@@ -1,0 +1,353 @@
+.post-ad {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 4rem;
+}
+
+.post-header {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(15, 15, 15, 0.95));
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+.post-content {
+  padding: 3rem 0;
+}
+
+/* Steps Indicator */
+.steps-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.completed .step-number {
+  background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+  color: #1a1a1a;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(192, 192, 192, 0.1);
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+  border-color: #c0c0c0;
+  background: rgba(192, 192, 192, 0.2);
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+}
+
+.step-label {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.step.active .step-label {
+  color: #c0c0c0;
+}
+
+/* Step Content */
+.step-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-content h2 {
+  color: #c0c0c0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.step-title {
+  color: #c0c0c0;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form Elements */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.9rem;
+  background: rgba(192, 192, 192, 0.05);
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  border-radius: 0.5rem;
+  color: #c0c0c0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  background: rgba(192, 192, 192, 0.1);
+  border-color: rgba(192, 192, 192, 0.4);
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+/* File Upload */
+.file-upload {
+  position: relative;
+  cursor: pointer;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  padding: 2rem;
+  background: rgba(192, 192, 192, 0.05);
+  border: 2px dashed rgba(192, 192, 192, 0.3);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #888;
+  transition: all 0.3s ease;
+}
+
+.file-upload:hover .file-upload-label {
+  background: rgba(192, 192, 192, 0.1);
+  border-color: rgba(192, 192, 192, 0.5);
+}
+
+/* Plans Grid */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.plan-card {
+  text-align: center;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.plan-card h3 {
+  color: #c0c0c0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  color: #c0c0c0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #e8e8e8, #c0c0c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.plan-features li {
+  color: #888;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+.plan-card.selected {
+  background: rgba(192, 192, 192, 0.1);
+  border-color: #c0c0c0;
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(192, 192, 192, 0.2);
+}
+
+/* Payment */
+.payment-info {
+  background: rgba(192, 192, 192, 0.1);
+  border-left: 4px solid #c0c0c0;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  color: #888;
+  border-radius: 0.5rem;
+}
+
+.payment-summary {
+  background: rgba(192, 192, 192, 0.05);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #888;
+}
+
+.summary-row.total {
+  border-top: 2px solid rgba(192, 192, 192, 0.2);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c0c0c0;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #1a1a1a;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.success-message h2 {
+  color: #c0c0c0;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #888;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-indicator {
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .step-label {
+    font-size: 0.75rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-content {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}

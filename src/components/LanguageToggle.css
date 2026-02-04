@@ -1,0 +1,32 @@
+.language-toggle {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-btn {
+  background: rgba(192, 192, 192, 0.1);
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  color: #c0c0c0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lang-btn:hover {
+  background: rgba(192, 192, 192, 0.2);
+  border-color: rgba(192, 192, 192, 0.5);
+  transform: translateY(-2px);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+  border-color: #c0c0c0;
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
+}

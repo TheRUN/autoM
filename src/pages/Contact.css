@@ -1,0 +1,222 @@
+.contact {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 4rem;
+}
+
+.contact-header {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(15, 15, 15, 0.95));
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+.contact-content {
+  padding: 4rem 0;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form-section {
+  padding: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.9rem;
+  background: rgba(192, 192, 192, 0.05);
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  border-radius: 0.5rem;
+  color: #c0c0c0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background: rgba(192, 192, 192, 0.1);
+  border-color: rgba(192, 192, 192, 0.4);
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+  color: #1a1a1a;
+  box-shadow: 0 8px 25px rgba(192, 192, 192, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(192, 192, 192, 0.4);
+}
+
+/* Contact Info */
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-card {
+  padding: 2rem;
+}
+
+.contact-info-card h3,
+.social-links h3 {
+  color: #c0c0c0;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(192, 192, 192, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.info-text strong {
+  color: #c0c0c0;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.info-text p {
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  padding: 2rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.social-btn {
+  padding: 0.8rem;
+  background: rgba(192, 192, 192, 0.05);
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  border-radius: 0.5rem;
+  color: #c0c0c0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: rgba(192, 192, 192, 0.1);
+  border-color: rgba(192, 192, 192, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(192, 192, 192, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(192, 192, 192, 0.1);
+  border-radius: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: rgba(192, 192, 192, 0.08);
+  border-color: rgba(192, 192, 192, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 2rem 1rem;
+  }
+
+  .contact-form-section,
+  .contact-info-card,
+  .social-links {
+    padding: 1.5rem;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
